@@ -1,0 +1,48 @@
+.footer-container {
+  background-color: var(--secondary-color);
+  
+  height: 15vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container ul {
+  list-style: none;
+
+  display: flex;
+  gap: 5rem;
+}
+
+.footer-container li {
+  background-color: var(--primary-color);
+
+  border-radius: 2rem;
+}
+
+.footer-container a {
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container img {
+  width: 3rem;
+}
+
+/* Tablet responsive design */
+@media (max-width: 900px) {}
+
+/* Mobile responsive design */
+@media (max-width: 450px) {
+  .footer-container a {
+    padding: 0.25rem;
+  }
+
+  .footer-container img {
+    width: 2.5rem;
+  }
+}

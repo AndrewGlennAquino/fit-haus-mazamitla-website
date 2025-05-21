@@ -10,22 +10,19 @@ function Header() {
         <nav className="monitor-nav-container">
           <ul>
             <li>
-              <a href="#">Link 1</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#">Link 2</a>
+              <a href="#hours">Hours</a>
             </li>
             <li>
-              <a href="#">Link 3</a>
-            </li>
-            <li>
-              <a href="#">Link 4</a>
+              <a href="#footer">Socials</a>
             </li>
           </ul>
         </nav>
 
         <button className="menu-nav-container">
-          <img src={menu}/>
+          <img src={menu} />
         </button>
       </header>
     </>

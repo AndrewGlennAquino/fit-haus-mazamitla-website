@@ -1,10 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 :root {
   --primary-color: rgb(253, 223, 87);
   --secondary-color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
   --primary-color-transparent: rgba(253, 223, 87, 0.15);
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(./assets/fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Permanent Marker";
+  src: url(./assets/fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 body {

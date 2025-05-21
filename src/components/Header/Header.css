@@ -58,8 +58,8 @@
   font-weight: bold;
 }
 
-/* Nav for tablet and mobile*/
-.menu-nav-container {
+/* Button for tablet and moblie nav */
+.menu-nav-button {
   background-color: transparent;
 
   border: 0;
@@ -69,13 +69,50 @@
   align-items: center;
 }
 
-/* Table and mobile nav image */
-.menu-nav-container img {
+/* Tablet and mobile nav button image */
+.menu-nav-button img {
   width: 2.5rem;
 }
 
+/* Tablet and mobile nav container */
+.menu-nav-container {
+  background-color: var(--background-color);
+
+  padding: 1rem;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-nav-container ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Monitor nav link text */
+.menu-nav-container a {
+  color: var(--secondary-color);
+
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Show dropdown menu on menu nav click */
+.show {
+  display: flex;
+}
+
 /* Tablet responsive design */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .header-container {
     padding: 1rem 3rem;
   }
@@ -84,7 +121,7 @@
     display: none;
   }
 
-  .menu-nav-container {
+  .menu-nav-button {
     display: flex;
   }
 }

@@ -1,5 +1,5 @@
-.hours-container {
-  background-color: var(--background-color);
+.offers-container {
+  background-color: var(--primary-color);
 
   height: 50vh;
 
@@ -12,7 +12,7 @@
   gap: 5rem;
 }
 
-.hours-container h1 {
+.offers-container h1 {
   color: var(--secondary-color);
 
   font-family: Permanent Marker, sans-serif;
@@ -21,18 +21,18 @@
 
 /* Tablet responsive design */
 @media (max-width: 1024px) {
-  .hours-container {
+  .offers-container {
     padding: 1rem 3rem;
   }
 
-  .hours-container h1 {
+  .offers-container h1 {
     font-size: 4.5rem;
   }
 }
 
 /* Mobile responsive design */
 @media (max-width: 450px) {
-  .hours-container {
+  .offers-container {
     text-align: center;
 
     padding: 1rem 2rem;
@@ -40,7 +40,7 @@
     gap: 3rem;
   }
 
-  .hours-container h1 {
+  .offers-container h1 {
     font-size: 3rem;
   }
 }

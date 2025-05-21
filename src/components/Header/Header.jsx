@@ -1,7 +1,15 @@
+import { useState } from "react";
+
 import "./Header.css";
 import menu from "../../assets/icons/menu.svg";
 
 function Header() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
   return (
     <>
       <header className="header-container">
@@ -13,7 +21,13 @@ function Header() {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#hours">Hours</a>
+              <a href="#hours">Example 1</a>
+            </li>
+            <li>
+              <a href="#rates">Example 2</a>
+            </li>
+            <li>
+              <a href="#offers">Example 3</a>
             </li>
             <li>
               <a href="#footer">Socials</a>
@@ -21,10 +35,32 @@ function Header() {
           </ul>
         </nav>
 
-        <button className="menu-nav-container">
+        <button className="menu-nav-button" onClick={handleClick}>
           <img src={menu} />
         </button>
       </header>
+
+      <nav
+        className={clicked ? "menu-nav-container show" : "menu-nav-container"}
+      >
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#hours">Example 1</a>
+          </li>
+          <li>
+            <a href="#rates">Example 2</a>
+          </li>
+          <li>
+            <a href="#offers">Example 3</a>
+          </li>
+          <li>
+            <a href="#footer">Socials</a>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }

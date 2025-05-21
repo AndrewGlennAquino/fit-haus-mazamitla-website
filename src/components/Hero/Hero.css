@@ -24,7 +24,7 @@
 }
 
 /* Tablet responsive design */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .hero-container {
     background-position: center;
     padding: 1rem 3rem;

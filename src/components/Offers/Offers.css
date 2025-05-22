@@ -1,7 +1,7 @@
 .offers-container {
   background-color: var(--primary-color);
 
-  height: 50vh;
+  height: 50dvh;
 
   padding: 1rem 5rem;
 
@@ -10,37 +10,33 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-}
 
-.offers-container h1 {
-  color: var(--secondary-color);
+  h1 {
+    color: var(--secondary-color);
 
-  font-family: Permanent Marker, sans-serif;
-  font-size: 7rem;
-}
+    font-family: Permanent Marker, sans-serif;
+    font-size: 7rem;
+  }
 
-/* Tablet responsive design */
-@media (max-width: 1024px) {
-  .offers-container {
+  /* Tablet responsive design */
+  @media (max-width: 1024px) {
     padding: 1rem 3rem;
+
+    h1 {
+      font-size: 4.5rem;
+    }
   }
 
-  .offers-container h1 {
-    font-size: 4.5rem;
-  }
-}
-
-/* Mobile responsive design */
-@media (max-width: 450px) {
-  .offers-container {
+  /* Mobile responsive design */
+  @media (max-width: 500px) {
     text-align: center;
 
     padding: 1rem 2rem;
 
     gap: 3rem;
-  }
 
-  .offers-container h1 {
-    font-size: 3rem;
+    h1 {
+      font-size: 3rem;
+    }
   }
 }

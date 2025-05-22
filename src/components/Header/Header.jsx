@@ -2,10 +2,12 @@ import { useState } from "react";
 
 import "./Header.css";
 import menu from "../../assets/icons/menu.svg";
+import close from "../../assets/icons/close.svg";
 
 function Header() {
   const [clicked, setClicked] = useState(false);
 
+  // Function that handles hamburger menu click
   const handleClick = () => {
     setClicked(!clicked);
   };
@@ -36,12 +38,12 @@ function Header() {
         </nav>
 
         <button className="menu-nav-button" onClick={handleClick}>
-          <img src={menu} />
+          <img src={clicked ? close : menu} />
         </button>
       </header>
 
       <nav
-        className={clicked ? "menu-nav-container show" : "menu-nav-container"}
+        className={clicked ? "menu-nav-container show" : "menu-nav-container hide"}
       >
         <ul>
           <li>

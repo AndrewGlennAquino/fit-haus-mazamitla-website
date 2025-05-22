@@ -3,6 +3,8 @@
 
   font-family: Bebas Neue, sans-serif;
 
+  width: 100%;
+
   padding: 1rem 5rem;
 
   position: sticky;
@@ -11,51 +13,73 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.header-container h1 {
-  font-size: 2.5rem;
-  font-style: italic;
-  letter-spacing: 0.25rem;
+  h1 {
+    font-size: 2.5rem;
+    font-style: italic;
+    letter-spacing: 0.25rem;
+
+    z-index: 100;
+  }
+
+  /* Tablet responsive design */
+  @media (max-width: 1024px) {
+    padding: 1rem 3rem;
+  }
+
+  /* Mobile responsive design */
+  @media (max-width: 500px) {
+    padding: 1rem 2rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
 }
 
 /* Nav for monitor */
-.monitor-nav-container ul {
-  list-style: none;
+.monitor-nav-container {
+  ul {
+    list-style: none;
 
-  position: relative;
-  top: calc(0.25rem / 2);
+    position: relative;
+    top: calc(0.25rem / 2);
 
-  display: flex;
-  gap: 3rem;
-}
+    display: flex;
+    gap: 3rem;
 
-/* Monitor nav bottom border for links */
-.monitor-nav-container li::after {
-  content: "";
-  background: var(--secondary-color);
+    /* Monitor nav bottom border for links */
+    li::after {
+      content: "";
+      background: var(--secondary-color);
 
-  width: 0;
-  height: 0.25rem;
+      width: 0;
+      height: 0.25rem;
 
-  display: block;
+      display: block;
 
-  transition: width 0.25s;
-}
+      transition: width 0.25s;
+    }
 
-/* Monitor nav bottom border transition for links */
-.monitor-nav-container li:hover::after {
-  width: 100%;
-}
+    /* Monitor nav bottom border transition for links */
+    li:hover::after {
+      width: 100%;
+    }
 
-/* Monitor nav link text */
-.monitor-nav-container a {
-  color: var(--secondary-color);
+    /* Monitor nav link text */
+    a {
+      color: var(--secondary-color);
 
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
+      text-decoration: none;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  /* Tablet and mobile responsive design */
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 /* Button for tablet and moblie nav */
@@ -67,72 +91,83 @@
   display: none;
   justify-content: center;
   align-items: center;
-}
 
-/* Tablet and mobile nav button image */
-.menu-nav-button img {
-  width: 2.5rem;
+  z-index: 100;
+
+  /* Tablet and mobile nav button image */
+  img {
+    width: 2.5rem;
+  }
+
+  /* Tablet and mobile responsive design */
+  @media (max-width: 1024px) {
+    display: flex;
+  }
 }
 
 /* Tablet and mobile nav container */
 .menu-nav-container {
-  background-color: var(--background-color);
+  background-color: var(--secondary-color-transparent);
 
-  padding: 1rem;
+  padding: 1rem 5rem;
+  margin-top: 5.25rem;
+
+  position: fixed;
+
+  z-index: 99;
+
+  width: 100dvw;
+  height: 100dvw;
 
   display: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.menu-nav-container ul {
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
-}
 
-/* Monitor nav link text */
-.menu-nav-container a {
-  color: var(--secondary-color);
+  button {
+    background-color: transparent;
 
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
+    border: 0;
+
+    margin-left: auto;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  a {
+    color: var(--background-color);
+
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-size: 1.5rem;
+  }
+
+  /* Tablet responsive design */
+  @media (max-width: 1024px) {
+    padding: 1rem 3rem;
+  }
+
+  /* Mobile responsive design */
+  @media (max-width: 500px) {
+    padding: 1rem 2rem;
+  }
 }
 
 /* Show dropdown menu on menu nav click */
 .show {
   display: flex;
-}
-
-/* Tablet responsive design */
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 1rem 3rem;
-  }
-
-  .monitor-nav-container {
-    display: none;
-  }
-
-  .menu-nav-button {
-    display: flex;
-  }
-}
-
-/* Mobile responsive design */
-@media (max-width: 450px) {
-  .header-container {
-    padding: 1rem 2rem;
-  }
-
-  .header-container h1 {
-    font-size: 2rem;
-  }
 }

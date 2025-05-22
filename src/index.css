@@ -3,6 +3,7 @@
   --secondary-color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
   --primary-color-transparent: rgba(253, 223, 87, 0.15);
+  --secondary-color-transparent: rgba(0, 0, 0, 0.75);
 }
 
 @font-face {
@@ -17,11 +18,11 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-VariableFont_wdth\wght.ttf);
+  src: url(./assets/fonts/Roboto_Condensed-Regular.ttf);
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 * {

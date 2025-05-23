@@ -6,6 +6,7 @@ import close from "../../assets/icons/close.svg";
 
 function Header() {
   const [clicked, setClicked] = useState(false);
+  const [active, setActive] = useState("home");
 
   // Function that handles hamburger menu click
   const handleClick = () => {
@@ -19,20 +20,30 @@ function Header() {
 
         <nav className="monitor-nav-container">
           <ul>
-            <li>
-              <a href="#home">Home</a>
+            <li className={active === "home" ? "active" : ""}>
+              <a href="#home" onClick={() => setActive("home")}>
+                Home
+              </a>
             </li>
-            <li>
-              <a href="#hours">Example 1</a>
+            <li className={active === "example-1" ? "active" : ""}>
+              <a href="#hours" onClick={() => setActive("example-1")}>
+                Example 1
+              </a>
             </li>
-            <li>
-              <a href="#rates">Example 2</a>
+            <li className={active === "example-2" ? "active" : ""}>
+              <a href="#rates" onClick={() => setActive("example-2")}>
+                Example 2
+              </a>
             </li>
-            <li>
-              <a href="#offers">Example 3</a>
+            <li className={active === "example-3" ? "active" : ""}>
+              <a href="#offers" onClick={() => setActive("example-3")}>
+                Example 3
+              </a>
             </li>
-            <li>
-              <a href="#footer">Socials</a>
+            <li className={active === "socials" ? "active" : ""}>
+              <a href="#footer" onClick={() => setActive("socials")}>
+                Socials
+              </a>
             </li>
           </ul>
         </nav>
@@ -46,20 +57,60 @@ function Header() {
         className={clicked ? "menu-nav-container show" : "menu-nav-container"}
       >
         <ul>
-          <li>
-            <a href="#home" onClick={handleClick}>Home</a>
+          <li className={active === "home" ? "active" : ""}>
+            <a
+              href="#home"
+              onClick={(e) => {
+                handleClick(e);
+                setActive("home");
+              }}
+            >
+              Home
+            </a>
           </li>
-          <li>
-            <a href="#hours" onClick={handleClick}>Example 1</a>
+          <li className={active === "example-1" ? "active" : ""}>
+            <a
+              href="#hours"
+              onClick={(e) => {
+                handleClick(e);
+                setActive("example-1");
+              }}
+            >
+              Example 1
+            </a>
           </li>
-          <li>
-            <a href="#rates" onClick={handleClick}>Example 2</a>
+          <li className={active === "example-2" ? "active" : ""}>
+            <a
+              href="#rates"
+              onClick={(e) => {
+                handleClick(e);
+                setActive("example-2");
+              }}
+            >
+              Example 2
+            </a>
           </li>
-          <li>
-            <a href="#offers" onClick={handleClick}>Example 3</a>
+          <li className={active === "example-3" ? "active" : ""}>
+            <a
+              href="#offers"
+              onClick={(e) => {
+                handleClick(e);
+                setActive("example-3");
+              }}
+            >
+              Example 3
+            </a>
           </li>
-          <li>
-            <a href="#footer" onClick={handleClick}>Socials</a>
+          <li className={active === "socials" ? "active" : ""}>
+            <a
+              href="#footer"
+              onClick={(e) => {
+                handleClick(e);
+                setActive("socials");
+              }}
+            >
+              Socials
+            </a>
           </li>
         </ul>
       </nav>

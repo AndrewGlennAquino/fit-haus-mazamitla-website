@@ -47,19 +47,19 @@ function Header() {
       >
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={handleClick}>Home</a>
           </li>
           <li>
-            <a href="#hours">Example 1</a>
+            <a href="#hours" onClick={handleClick}>Example 1</a>
           </li>
           <li>
-            <a href="#rates">Example 2</a>
+            <a href="#rates" onClick={handleClick}>Example 2</a>
           </li>
           <li>
-            <a href="#offers">Example 3</a>
+            <a href="#offers" onClick={handleClick}>Example 3</a>
           </li>
           <li>
-            <a href="#footer">Socials</a>
+            <a href="#footer" onClick={handleClick}>Socials</a>
           </li>
         </ul>
       </nav>

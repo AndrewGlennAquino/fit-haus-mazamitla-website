@@ -113,7 +113,15 @@
   margin-top: 5.25rem;
 
   position: fixed;
-  
+  left: 100%;
+
+  transition: left 1s;
+
+  /* Show hamburger menu container on menu nav button click */
+  &.show {
+    left: 0;
+  }
+
   z-index: 99;
 
   width: 100dvw;
@@ -165,41 +173,5 @@
     padding: 1rem 2rem;
 
     margin-top: 4.55rem;
-  }
-}
-
-/* Show hamburger menu container on menu nav button click */
-.show {
-  left: 0;
-
-  animation: show 0.5s ease-in 0s 1;
-}
-
-/* Hide hamburger menu on menu nav button click */
-.hide {
-  left: 100%;
-
-  animation: hide 0.5s ease-in 0s 1;
-}
-
-/* Animation to show menu nav container */
-@keyframes show {
-  from {
-    left: 100%;
-  }
-
-  to {
-    left: 0;
-  }
-}
-
-/* Animation to hide menu nav container */
-@keyframes hide {
-  from {
-    left: 0;
-  }
-
-  to {
-    left: 100%;
   }
 }

@@ -43,7 +43,7 @@ function Header() {
       </header>
 
       <nav
-        className={clicked ? "menu-nav-container show" : "menu-nav-container hide"}
+        className={clicked ? "menu-nav-container show" : "menu-nav-container"}
       >
         <ul>
           <li>

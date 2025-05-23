@@ -113,15 +113,14 @@
   margin-top: 5.25rem;
 
   position: fixed;
-
+  
   z-index: 99;
 
   width: 100dvw;
-  height: 100dvw;
+  height: 100dvh;
 
-  display: none;
+  display: flex;
   flex-direction: column;
-
   gap: 1rem;
 
   button {
@@ -164,10 +163,43 @@
   /* Mobile responsive design */
   @media (max-width: 500px) {
     padding: 1rem 2rem;
+
+    margin-top: 4.55rem;
   }
 }
 
-/* Show dropdown menu on menu nav click */
+/* Show hamburger menu container on menu nav button click */
 .show {
-  display: flex;
+  left: 0;
+
+  animation: show 0.5s ease-in 0s 1;
+}
+
+/* Hide hamburger menu on menu nav button click */
+.hide {
+  left: 100%;
+
+  animation: hide 0.5s ease-in 0s 1;
+}
+
+/* Animation to show menu nav container */
+@keyframes show {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+/* Animation to hide menu nav container */
+@keyframes hide {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
 }
